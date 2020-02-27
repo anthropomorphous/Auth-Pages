@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="haJ-wp-DKS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Changing Title View Controller-->
+        <scene sceneID="Pt1-V3-xn3">
+            <objects>
+                <viewController storyboardIdentifier="ChangingTitle" useStoryboardIdentifierAsRestorationIdentifier="YES" id="haJ-wp-DKS" customClass="ChangingTitleViewController" customModule="ChangeTitle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9Z-PO-O7b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gFs-Za-h2N">
+                                <rect key="frame" x="30" y="153" width="354" height="76"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Измените заголовок:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEE-9C-Gge">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6T-r4-m7B">
+                                        <rect key="frame" x="0.0" y="34" width="354" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="190" translatesAutoresizingMaskIntoConstraints="NO" id="h4n-ds-PDV">
+                                <rect key="frame" x="42" y="277" width="338" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b36-uw-OwB">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Сохранить"/>
+                                        <connections>
+                                            <action selector="saveTapped:" destination="haJ-wp-DKS" eventType="touchUpInside" id="DsI-gX-7Ke"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0l-Mz-M8M">
+                                        <rect key="frame" x="276" y="0.0" width="62" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Отмена">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="haJ-wp-DKS" eventType="touchUpInside" id="JXs-VA-Q1y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h4n-ds-PDV" firstAttribute="top" secondItem="gFs-Za-h2N" secondAttribute="bottom" constant="48" id="0Im-Fz-h7I"/>
+                            <constraint firstItem="wyE-6d-zp7" firstAttribute="trailing" secondItem="gFs-Za-h2N" secondAttribute="trailing" constant="30" id="7TB-eD-I5g"/>
+                            <constraint firstItem="wyE-6d-zp7" firstAttribute="bottom" secondItem="h4n-ds-PDV" secondAttribute="bottom" constant="552" id="CgL-SD-SwL"/>
+                            <constraint firstItem="h4n-ds-PDV" firstAttribute="leading" secondItem="wyE-6d-zp7" secondAttribute="leading" constant="42" id="Xo4-yG-jh7"/>
+                            <constraint firstItem="wyE-6d-zp7" firstAttribute="trailing" secondItem="h4n-ds-PDV" secondAttribute="trailing" constant="34" id="igZ-1y-snN"/>
+                            <constraint firstItem="gFs-Za-h2N" firstAttribute="top" secondItem="wyE-6d-zp7" secondAttribute="top" constant="109" id="ocx-Hq-454"/>
+                            <constraint firstItem="gFs-Za-h2N" firstAttribute="leading" secondItem="wyE-6d-zp7" secondAttribute="leading" constant="30" id="rbA-UE-LC3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wyE-6d-zp7"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleField" destination="C6T-r4-m7B" id="7iT-yB-gMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctm-84-MRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
