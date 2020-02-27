@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangingTitleViewController" customModule="ChangeTitleWIthNavController" customModuleProvider="target">
+            <connections>
+                <outlet property="titleField" destination="uiK-27-rlP" id="eIn-vN-fw5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ciy-N7-6tG">
+                    <rect key="frame" x="35" y="172" width="344" height="68"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменить заголовок:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJV-UU-l1i">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiK-27-rlP">
+                            <rect key="frame" x="0.0" y="34" width="344" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="170" translatesAutoresizingMaskIntoConstraints="NO" id="RXQ-1e-XnJ">
+                    <rect key="frame" x="51" y="305" width="312" height="33"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufN-oP-TFl">
+                            <rect key="frame" x="0.0" y="0.0" width="86" height="33"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Сохранить"/>
+                            <connections>
+                                <action selector="saveTapped:" destination="-1" eventType="touchUpInside" id="0a5-kX-bVG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygl-Fd-KqO">
+                            <rect key="frame" x="256" y="0.0" width="56" height="33"/>
+                            <state key="normal" title="Отмена">
+                                <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="dm5-uj-4tJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ciy-N7-6tG" secondAttribute="trailing" constant="35" id="Btr-hj-DPh"/>
+                <constraint firstItem="Ciy-N7-6tG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="128" id="ToE-EZ-ClE"/>
+                <constraint firstItem="RXQ-1e-XnJ" firstAttribute="top" secondItem="Ciy-N7-6tG" secondAttribute="bottom" constant="65" id="XPb-7O-4Qa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RXQ-1e-XnJ" secondAttribute="trailing" constant="51" id="itx-yg-Ph3"/>
+                <constraint firstItem="Ciy-N7-6tG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="smE-mq-PPP"/>
+                <constraint firstItem="RXQ-1e-XnJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="51" id="yZG-vu-O1v"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </view>
+    </objects>
+</document>
