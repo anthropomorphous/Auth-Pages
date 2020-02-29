@@ -20,7 +20,12 @@ class StartViewController: UIViewController, UITextFieldDelegate {
         let helloViewController = HelloViewController()
         helloViewController.delegate = self
         helloViewController.user = userCollection.users.first
-        navigationController?.pushViewController(helloViewController, animated: true)
+        helloViewController.tabBarItem = UITabBarItem(title: "Hello", image: UIImage(named: "bolt-2x"), tag: 0)
+        let editViewController = EditViewController()
+        editViewController.tabBarItem = UITabBarItem(title: "Edit", image: UIImage(named: "bolt-2x"), tag: 0)
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [helloViewController, editViewController]
+        navigationController?.pushViewController(tabBarController, animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -36,7 +41,6 @@ class StartViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
         loginField.delegate = self
     }
 }

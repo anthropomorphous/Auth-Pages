@@ -20,14 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: startViewController)
         navigationController.setNavigationBarHidden(true, animated: true)
         
-        navigationController.tabBarItem = UITabBarItem(title: "Hello", image: UIImage(named: "bolt-2x"), tag: 0)
-        let editViewController = EditViewController()
-        editViewController.tabBarItem = UITabBarItem(title: "Edit", image: UIImage(named: "bolt-2x"), tag: 0)
-        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [navigationController, editViewController]
-        
-        window?.rootViewController = tabBarController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true
     }

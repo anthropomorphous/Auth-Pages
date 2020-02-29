@@ -32,14 +32,11 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         delegate?.passUserWithNewName(receivedUser)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = false
         loginField.delegate = self
     
-        delegate?.passUser(user!, userCollection)
+        delegate?.passUser(user!)
         loginField.text = user!.name
     }
     

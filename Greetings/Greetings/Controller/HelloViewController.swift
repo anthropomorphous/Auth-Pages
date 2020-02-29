@@ -10,7 +10,6 @@ import UIKit
 
 class HelloViewController: UIViewController {
 
-    var userCollection: Users?
     var user: User?
     var receivedUser: User?
     
@@ -25,11 +24,11 @@ class HelloViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = false
         
         guard let editViewController = self.tabBarController?.viewControllers?[1] as? EditViewController else { return }
         editViewController.delegate = self
         editViewController.user = user
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +36,8 @@ class HelloViewController: UIViewController {
         if nameChanged {
             updateLabel(receivedUser!.name)
         } else {
-            delegate?.passUser(user!, userCollection!)
+            delegate?.passUser(user!)
+            
             updateLabel(user!.name)
         }
     }
